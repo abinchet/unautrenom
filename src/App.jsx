@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./App.css";
 import Orb from "./Orb.jsx";
 import Titre from "./Titre.jsx";
@@ -10,19 +10,38 @@ import CircularGallery from "./caroussel.jsx";
 import Box from "./components/box.jsx";
 import Button from "./button.jsx";
 import Barre from "./Barre.jsx";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import Footer from "./components/Footer.jsx";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Link,
+  useLocation,
+} from "react-router-dom";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Projects from "./pages/Projects";
 import Gallerie from "./pages/Gallerie";
 import Designs from "./pages/Designs";
 import Videos from "./pages/Videos";
+import MentionsLegales from "./pages/MentionsLegales";
 import ScrollProgress from "./components/ScrollProgress.jsx";
 import "./timeline.css";
+
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+}
 
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <ScrollProgress />
       <Navbar />
       <Routes>
@@ -77,17 +96,20 @@ function App() {
                     className="titre-principal titre-centre"
                     style={{
                       pointerEvents: "auto",
-                      fontFamily: "Poppins, sans-serif",
+                      fontFamily: "Sansation Bold",
                       fontSize: "5.6rem",
                       fontWeight: "bold",
-                      marginBottom: "0.5rem",
+                      marginBottom: "0.2rem",
                     }}
                   >
                     Arthur BINCHET
                   </Titre>
 
                   <div style={{ textAlign: "center", maxWidth: "800px" }}>
-                    <div style={{ fontSize: "1.5rem", lineHeight: "1.8" }}>
+                    <div
+                      style={{ lineHeight: "1.8" }}
+                      className="text-2xl md:text-3xl lg:text-4xl"
+                    >
                       <TextType
                         text={[
                           "Portfolio",
@@ -99,7 +121,7 @@ function App() {
                         pauseDuration={1500}
                         showCursor={true}
                         cursorCharacter="|"
-                        className="text-white text-4xl"
+                        className="text-white"
                       />
                     </div>
                   </div>
@@ -142,7 +164,7 @@ function App() {
                       <Titre
                         className="underline decoration-blue-500 text-4xl md:text-5xl lg:text-5xl mb-4"
                         style={{
-                          fontFamily: "Poppins, sans-serif",
+                          fontFamily: "Sansation Bold",
                           fontWeight: "bold",
                         }}
                       >
@@ -204,7 +226,8 @@ function App() {
                     textColor="#ffffff"
                     borderRadius={0.05}
                     autoScroll={true}
-                    autoScrollSpeed={3.5}
+                    autoScrollSpeed={0.2}
+                    scrollEase={0.05}
                     showTitles={false}
                   />
                 </div>
@@ -264,22 +287,26 @@ function App() {
                         </div>
                         <div class="timeline_content">
                           <div class="company_box">
-                            <h5 class="role">Designer</h5>
+                            <h5 class="role">Designer / Photographe</h5>
                             <p class="company_name">ETeC Handball</p>
                           </div>
                           <div class="working_detail mb-3">
-                            <h6 class="type"></h6>
+                            <h6 class="type">Bénévolat</h6>
                             <p class="duration_time">Septembre 2025/présent</p>
                           </div>
                           <div class="tags">
                             <button class="tag_btn">Photoshop</button>
                             <button class="tag_btn">Illustrator</button>
+                            <button class="tag_btn">Photographie</button>
+                            <button class="tag_btn">Lightroom</button>
                             <button class="tag_btn">Excel</button>
                           </div>
                           <p class="desc">
                             Je réalise des designs pour l'ETeC Handball, les
                             designs sont préalablement faits et je les modifie
-                            en fonction des matchs du week-end.
+                            en fonction des matchs du week-end. Je fais aussi
+                            des photos pour le compte du club sur demande ou de
+                            mon plein gré.
                           </p>
                         </div>
                       </div>
@@ -298,66 +325,30 @@ function App() {
                           </div>
                           <div class="timeline_content">
                             <div class="company_box">
-                              <h5 class="role">your position</h5>
-                              <p class="company_name">company name</p>
+                              <h5 class="role">Baccalauréat Général</h5>
+                              <p class="company_name">Marguerite de Valois</p>
                             </div>
-                            <div class="working_detail">
+                            <div class="working_detail mb-3">
                               <h6 class="type">
-                                Part-time | <span>Remote</span>
+                                Mention | <span>Assez bien</span>
                               </h6>
-                              <p class="duration_time">start date - end date</p>
+                              <p class="duration_time">
+                                Septembre 2021 / Juin 2024
+                              </p>
                             </div>
                             <div class="tags">
-                              <button class="tag_btn">Python</button>
-                              <button class="tag_btn">Nodejs</button>
-                              <button class="tag_btn">React</button>
-                              <button class="tag_btn">NextJs</button>
-                              <button class="tag_btn">Django</button>
+                              <button class="tag_btn">Mathématiques</button>
+                              <button class="tag_btn">Anglais</button>
+                              <button class="tag_btn">SES</button>
                             </div>
                             <p class="desc">
-                              Lorem ipsum dolor sit amet consectetur adipisicing
-                              elit. Numquam eaque iusto rerum recusandae
-                              delectus facilis excepturi, quasi culpa eius
-                              repudiandae.
+                              J'ai obtenu mon baccalauréat général avec la
+                              mention assez bien. J'avais mathématiques et AMC
+                              (Anglais Monde Contemporain) comme spécialités
+                              avec SES (Sciences Economiques et Sociales) en
+                              première.
                             </p>
                           </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div
-                      class="timeline_box box-2"
-                      data-aos="fade-left"
-                      data-aos-offset="30"
-                      data-aos-duration="700"
-                      data-aos-easing="ease-in-sine"
-                    >
-                      <div class="timeline_card">
-                        <div class="icon">
-                          <div class="circle"></div>
-                        </div>
-                        <div class="timeline_content">
-                          <div class="company_box">
-                            <h5 class="role">Sr. Full-Stack Developer</h5>
-                            <p class="company_name">G-Tech Official</p>
-                          </div>
-                          <div class="working_detail">
-                            <h6 class="type">
-                              Part-time | <span>Remote</span>
-                            </h6>
-                            <p class="duration_time">2022 - Present</p>
-                          </div>
-                          <div class="tags">
-                            <button class="tag_btn">Python</button>
-                            <button class="tag_btn">Nodejs</button>
-                            <button class="tag_btn">React</button>
-                            <button class="tag_btn">NextJs</button>
-                            <button class="tag_btn">Django</button>
-                          </div>
-                          <p class="desc">
-                            I design and develop services for customers of all
-                            sizes, specializing in creating stylish, modern
-                            websites
-                          </p>
                         </div>
                       </div>
                     </div>
@@ -398,11 +389,10 @@ function App() {
                   }}
                 >
                   <Titre
-                    className="underline decoration-blue-500 text-4xl md:text-5xl lg:text-5xl mb-4 titre-centre"
+                    className="underline decoration-blue-500 text-2xl md:text-4xl lg:text-5xl mb-4 titre-centre"
                     style={{
                       pointerEvents: "auto",
-                      fontFamily: "Poppins, sans-serif",
-                      fontSize: "2.5rem",
+                      fontSize: "clamp(1.75rem, 4vw, 2.5rem)",
                       fontWeight: "bold",
                       marginBottom: "3.5rem",
                     }}
@@ -413,33 +403,37 @@ function App() {
                     <img
                       src="/HTML.png"
                       alt="Logo HTML"
-                      className="h-22 w-24"
+                      className="h-16 w-16 md:h-22 md:w-24"
                     />
-                    <img src="/CSS.png" alt="Logo CSS" className="h-22 w-24" />
+                    <img
+                      src="/CSS.png"
+                      alt="Logo CSS"
+                      className="h-16 w-16 md:h-22 md:w-24"
+                    />
                     <img
                       src="/REACT.png"
                       alt="Logo React"
-                      className="h-22 w-24"
+                      className="h-16 w-16 md:h-22 md:w-24"
                     />
                     <img
                       src="/PHOTOSHOP.png"
                       alt="Logo Photoshop"
-                      className="h-22 w-24"
+                      className="h-16 w-16 md:h-22 md:w-24"
                     />
                     <img
                       src="/ILLUSTRATOR.png"
                       alt="Logo Illustrator"
-                      className="h-22 w-24"
+                      className="h-16 w-16 md:h-22 md:w-24"
                     />
                     <img
                       src="/DAVINCI.png"
                       alt="Logo DaVinci Resolve"
-                      className="h-26 w-26"
+                      className="h-18 w-18 md:h-26 md:w-26"
                     />
                     <img
                       src="/LIGHTROOM.png"
                       alt="Logo Lightroom"
-                      className="h-22 w-24"
+                      className="h-16 w-16 md:h-22 md:w-24"
                     />
                   </div>
                   <div className="flex justify-center mt-10">
@@ -454,7 +448,6 @@ function App() {
               <section>
                 <div
                   style={{
-                    marginTop: "2rem",
                     paddingBottom: "4rem",
                   }}
                 >
@@ -462,7 +455,6 @@ function App() {
                     className="underline decoration-blue-500 text-4xl md:text-5xl lg:text-5xl mb-4 titre-centre"
                     style={{
                       pointerEvents: "auto",
-                      fontFamily: "Poppins, sans-serif",
                       fontSize: "2.5rem",
                       fontWeight: "bold",
                       marginBottom: "3rem",
@@ -624,15 +616,73 @@ function App() {
                   </div>
                 </div>
               </section>
+              <Footer />
             </div>
           }
         />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/projects" element={<Projects />} />
-        <Route path="/gallery" element={<Gallerie />} />
-        <Route path="/designs" element={<Designs />} />
-        <Route path="/videos" element={<Videos />} />
+        <Route
+          path="/about"
+          element={
+            <>
+              <About />
+              <Footer />
+            </>
+          }
+        />
+        <Route
+          path="/contact"
+          element={
+            <>
+              <Contact />
+              <Footer />
+            </>
+          }
+        />
+        <Route
+          path="/projects"
+          element={
+            <>
+              <Projects />
+              <Footer />
+            </>
+          }
+        />
+        <Route
+          path="/gallery"
+          element={
+            <>
+              <Gallerie />
+              <Footer />
+            </>
+          }
+        />
+        <Route
+          path="/designs"
+          element={
+            <>
+              <Designs />
+              <Footer />
+            </>
+          }
+        />
+        <Route
+          path="/videos"
+          element={
+            <>
+              <Videos />
+              <Footer />
+            </>
+          }
+        />
+        <Route
+          path="/mentions-legales"
+          element={
+            <>
+              <MentionsLegales />
+              <Footer />
+            </>
+          }
+        />
       </Routes>
     </Router>
   );

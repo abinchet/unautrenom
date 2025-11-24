@@ -144,6 +144,7 @@ class Media {
     this.textColor = textColor;
     this.borderRadius = borderRadius;
     this.font = font;
+    this.speed = 0; // Initialize speed for uniform updates
     this.createShader();
     this.createMesh();
     this.createTitle();
@@ -266,8 +267,12 @@ class Media {
       }
     }
 
-    this.speed = scroll.current - scroll.last;
-    this.program.uniforms.uSpeed.value = this.speed;
+    // Only update speed uniform if it's changed significantly to reduce GPU updates
+    const newSpeed = scroll.current - scroll.last;
+    if (Math.abs(newSpeed - this.speed) > 0.001) {
+      this.speed = newSpeed;
+      this.program.uniforms.uSpeed.value = this.speed;
+    }
 
     const planeOffset = this.plane.scale.x / 2;
     const viewportOffset = this.viewport.width / 2;
@@ -330,6 +335,7 @@ class App {
     this.scroll = { ease: scrollEase, current: 0, target: 0, last: 0 };
     this.autoScroll = autoScroll;
     this.autoScrollSpeed = autoScrollSpeed;
+    this.lastTimestamp = null; // For delta time calculation
     this.onCheckDebounce = debounce(this.onCheck, 200);
     this.createRenderer();
     this.createCamera();
@@ -337,7 +343,7 @@ class App {
     this.onResize();
     this.createGeometry();
     this.createMedias(items, bend, textColor, borderRadius, font);
-    this.update();
+    this.raf = window.requestAnimationFrame(this.update.bind(this));
     this.addEventListeners();
   }
   createRenderer() {
@@ -463,10 +469,18 @@ class App {
       );
     }
   }
-  update() {
-    // Auto scroll logic
+  update(timestamp) {
+    // Calculate delta time for frame-independent animation
+    if (!this.lastTimestamp) this.lastTimestamp = timestamp;
+    const deltaTime = (timestamp - this.lastTimestamp) / 1000; // Convert to seconds
+    this.lastTimestamp = timestamp;
+
+    // Clamp delta time to prevent huge jumps (e.g., when tab is inactive)
+    const clampedDelta = Math.min(deltaTime, 0.1);
+
+    // Auto scroll logic with frame-independent speed
     if (this.autoScroll) {
-      this.scroll.target += this.autoScrollSpeed * 0.016; // 0.016 ≈ 1/60 for smooth 60fps animation
+      this.scroll.target += this.autoScrollSpeed * clampedDelta * 60; // Normalize to 60fps equivalent
     }
 
     this.scroll.current = lerp(

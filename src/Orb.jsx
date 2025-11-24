@@ -221,23 +221,30 @@ export default function Orb({
     let lastTime = 0;
     let currentRot = 0;
     const rotationSpeed = 0.3;
+    let mouseTicking = false;
 
     const handleMouseMove = (e) => {
-      const rect = container.getBoundingClientRect();
-      const x = e.clientX - rect.left;
-      const y = e.clientY - rect.top;
-      const width = rect.width;
-      const height = rect.height;
-      const size = Math.min(width, height);
-      const centerX = width / 2;
-      const centerY = height / 2;
-      const uvX = ((x - centerX) / size) * 2.0;
-      const uvY = ((y - centerY) / size) * 2.0;
+      if (!mouseTicking) {
+        requestAnimationFrame(() => {
+          const rect = container.getBoundingClientRect();
+          const x = e.clientX - rect.left;
+          const y = e.clientY - rect.top;
+          const width = rect.width;
+          const height = rect.height;
+          const size = Math.min(width, height);
+          const centerX = width / 2;
+          const centerY = height / 2;
+          const uvX = ((x - centerX) / size) * 2.0;
+          const uvY = ((y - centerY) / size) * 2.0;
 
-      if (Math.sqrt(uvX * uvX + uvY * uvY) < 0.8) {
-        targetHover = 1;
-      } else {
-        targetHover = 0;
+          if (Math.sqrt(uvX * uvX + uvY * uvY) < 0.8) {
+            targetHover = 1;
+          } else {
+            targetHover = 0;
+          }
+          mouseTicking = false;
+        });
+        mouseTicking = true;
       }
     };
 
@@ -245,11 +252,32 @@ export default function Orb({
       targetHover = 0;
     };
 
-    container.addEventListener("mousemove", handleMouseMove);
-    container.addEventListener("mouseleave", handleMouseLeave);
+    container.addEventListener("mousemove", handleMouseMove, { passive: true });
+    container.addEventListener("mouseleave", handleMouseLeave, {
+      passive: true,
+    });
 
     let rafId;
+    let isVisible = true;
+
+    // Intersection Observer pour pauser l'animation quand non visible
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        isVisible = entry.isIntersecting;
+        if (isVisible && !rafId) {
+          rafId = requestAnimationFrame(update);
+        }
+      },
+      { threshold: 0 }
+    );
+    observer.observe(container);
+
     const update = (t) => {
+      if (!isVisible) {
+        rafId = null;
+        return;
+      }
+
       rafId = requestAnimationFrame(update);
       const dt = (t - lastTime) * 0.001;
       lastTime = t;
@@ -271,6 +299,7 @@ export default function Orb({
     rafId = requestAnimationFrame(update);
 
     return () => {
+      observer.disconnect();
       cancelAnimationFrame(rafId);
       window.removeEventListener("resize", resize);
       container.removeEventListener("mousemove", handleMouseMove);

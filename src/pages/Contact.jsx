@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Navbar from "../Navbar.jsx";
 import Titre from "../Titre.jsx";
 import "./../App.css";
+import Footer from "../components/Footer.jsx";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -67,7 +68,6 @@ const Contact = () => {
             <Titre
               className="underline decoration-blue-500 text-4xl md:text-5xl lg:text-5xl mb-4 titre-centre"
               style={{
-                fontFamily: "Poppins, sans-serif",
                 fontWeight: "bold",
               }}
             >
@@ -219,14 +219,14 @@ const Contact = () => {
             </a>
           </div>
         </div>
-        <section id="contact" className="h-10"></section>
+        <section id="contact" className="h-30"></section>
         <div className="w-full px-8 md:px-14 lg:px-36 pb-20">
           <div className="flex flex-col lg:flex-row gap-8 items-stretch">
             {/* Photo avec overlay à gauche */}
             <div className="w-full lg:w-1/2 relative rounded-xl overflow-hidden shadow-xl min-h-[300px] lg:min-h-[450px]">
               <img
                 src="/pdp.png"
-                alt="Contact"
+                alt="Photo de contact"
                 className="w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-r from-blue-500/30 to-transparent flex items-center justify-center">

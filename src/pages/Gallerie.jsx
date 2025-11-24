@@ -14,7 +14,6 @@ const Gallerie = () => {
           <Titre
             className="underline decoration-blue-500 text-4xl md:text-5xl lg:text-5xl mb-10 titre-centre"
             style={{
-              fontFamily: "Poppins, sans-serif",
               fontWeight: "bold",
             }}
           >

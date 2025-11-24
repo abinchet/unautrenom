@@ -14,7 +14,6 @@ const Designs = () => {
           <Titre
             className="underline decoration-blue-500 text-4xl md:text-5xl lg:text-5xl mb-10 titre-centre"
             style={{
-              fontFamily: "Poppins, sans-serif",
               fontWeight: "bold",
             }}
           >
@@ -40,7 +39,7 @@ const Designs = () => {
               <div className="h-115 w-65 overflow-hidden">
                 <img
                   className="w-full h-full object-cover rounded-lg"
-                  src="/designs/monaco.jpg"
+                  src="/designs/dort.png"
                   alt="Design"
                 />
               </div>
@@ -68,7 +67,7 @@ const Designs = () => {
               <div className="h-115 w-65 overflow-hidden">
                 <img
                   className="w-full h-full object-cover rounded-lg"
-                  src="/designs/dort.png"
+                  src="/designs/monaco.jpg"
                   alt="Design"
                 />
               </div>

@@ -40,6 +40,7 @@
 }
 .timeline_container .timeline_box .timeline_card {
   width: calc(50% - 40px);
+  max-width: 1080px;
   /* width: 46.75%; */
   height: auto;
   background: #ffffff;
@@ -54,7 +55,8 @@
   content: "";
   height: 15px;
   width: 15px;
-  background: #cccccc;
+  background: #ffdc18;
+  border: 2px solid #2d11ff;
   backdrop-filter: blur(10px);
   top: 1.25rem;
   z-index: -1;

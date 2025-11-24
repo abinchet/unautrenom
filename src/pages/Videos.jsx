@@ -15,7 +15,7 @@ const Videos = () => {
         <div className="flex flex-col min-h-screen justify-center items-center px-4 md:px-8 lg:px-24 py-20 md:py-30">
           <Titre
             className="underline decoration-blue-500 text-3xl md:text-4xl lg:text-5xl mb-6 text-center"
-            style={{ fontFamily: "Poppins, sans-serif", fontWeight: "bold" }}
+            style={{ fontWeight: "bold" }}
           >
             Mes Vidéos
           </Titre>
@@ -334,8 +334,8 @@ const Videos = () => {
                     className="group relative block w-full h-full"
                   >
                     <img
-                      src="ombre.png"
-                      alt="Screen de l'ombre"
+                      src="???"
+                      alt="Pas encore disponible"
                       style={{
                         width: "100%",
                         height: "100%",
@@ -374,11 +374,13 @@ const Videos = () => {
                     marginBottom: "0.75rem",
                   }}
                 >
-                  ???
+                  L'agacement du travail
                 </Titre>
                 <Barre></Barre>
                 <p className="text-xs sm:text-sm md:text-sm lg:text-base leading-relaxed text-center px-2 py-2">
-                  ???
+                  Ce court métrage était un exercice audiovisuel, nous devions
+                  filmé au téléphone mais c'est la partie cadrage, rélféxion et
+                  post-production qui était intéressante.
                 </p>
               </div>
               <div className="flex flex-wrap justify-center mt-4 gap-2">
@@ -401,6 +403,26 @@ const Videos = () => {
                   className="text-xs"
                 >
                   Montage
+                </Rond>
+                <Rond
+                  style={{
+                    height: "35px",
+                    fontSize: "1rem",
+                    padding: "0.25rem 0.5rem",
+                  }}
+                  className="text-xs"
+                >
+                  Sound effects
+                </Rond>
+                <Rond
+                  style={{
+                    height: "35px",
+                    fontSize: "1rem",
+                    padding: "0.25rem 0.5rem",
+                  }}
+                  className="text-xs"
+                >
+                  Réflexion
                 </Rond>
               </div>
             </Box>

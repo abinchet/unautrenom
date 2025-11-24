@@ -12,7 +12,11 @@ function Titre({
   const TitleElement = level;
 
   return (
-    <TitleElement className={className} style={style} {...props}>
+    <TitleElement
+      className={className}
+      style={{ fontFamily: "Sansation Bold", ...style }}
+      {...props}
+    >
       {children}
     </TitleElement>
   );

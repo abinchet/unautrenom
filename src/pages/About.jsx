@@ -4,37 +4,40 @@ import Titre from "../Titre.jsx";
 import SoftBadge from "../components/SoftBadge.jsx";
 import Box from "../components/box.jsx";
 import "./../App.css";
+import Footer from "../components/Footer.jsx";
 
 const About = () => {
   return (
     <>
       <Navbar />
       <div className="app-container">
-        <div className="flex flex-col lg:flex-row min-h-screen justify-center items-center px-4 md:px-8 lg:px-24 gap-8 text-center lg:text-left py-10">
-          <div className="w-full lg:w-3/4 flex flex-col items-center lg:items-start mx-0 lg:mx-5 lg:pr-20 sm:text-left text-center">
+        {/* Section principale avec photo et texte */}
+        <div className="flex flex-col lg:flex-row min-h-screen justify-center items-center px-4 sm:px-6 md:px-8 lg:px-24 gap-6 sm:gap-8 text-center lg:text-left pt-35 pb-10 sm:pt-60 lg:pt-30 sm:pb-12 lg:py-10">
+          {/* Texte */}
+          <div className="w-full lg:w-3/4 flex flex-col items-center lg:items-start lg:mx-5 lg:pr-20">
             <Titre
-              className="underline decoration-blue-500 text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-6 md:mb-8"
+              className="underline decoration-blue-500 text-3xl sm:text-3xl md:text-4xl lg:text-5xl mb-4 sm:mb-6 md:mb-8 text-left px-2 w-full"
               style={{
-                fontFamily: "Poppins, sans-serif",
                 fontWeight: "bold",
               }}
             >
               Arthur BINCHET
             </Titre>
-            <div className="flex flex-col gap-6 md:gap-8">
-              <p className="text-sm sm:text-base md:text-lg lg:text-xl sm:text-left text-center">
+
+            <div className="flex flex-col gap-4 sm:gap-6 md:gap-8 text-left lg:text-left w-full max-w-3xl px-2 pb-10 sm:px-0">
+              <p className="text-lg sm:text-sm md:text-base lg:text-lg xl:text-xl leading-relaxed text-gray-300">
                 Je suis étudiant en BUT MMI à l'Iut d'Angoulême. Passionné par
                 la photographie, le développement Web ou encore le design, je
                 mets mes compétences à rudes épreuves afin de pouvoir me
                 diversifier et d'en apprendre toujours plus...
               </p>
-              <p className="text-sm sm:text-base md:text-lg lg:text-xl sm:text-left text-center">
+              <p className="text-lg sm:text-sm md:text-base lg:text-lg xl:text-xl leading-relaxed text-gray-300">
                 Je suis quelqu'un de sportif, je fais du handball depuis
                 maintenant quelques années, ce qui m'a permis de me découvrir un
                 côté compétiteur/déterminé. La musique fait aussi en grande
                 partie de ma vie et j'en pratique souvent dans mon quotidien.
               </p>
-              <p className="text-sm sm:text-base md:text-lg lg:text-xl sm:text-left text-center">
+              <p className="text-lg sm:text-sm md:text-base lg:text-lg xl:text-xl leading-relaxed text-gray-300">
                 Mon parcours en MMI m'a permis de développer une approche
                 polyvalente du multimédia : de la conception d'interfaces web
                 responsives à la réalisation de shootings photo, en passant par
@@ -43,11 +46,13 @@ const About = () => {
               </p>
             </div>
           </div>
-          <div className="w-32 h-full sm:w-48 sm:h-full md:w-64 md:h-full lg:w-1/4 lg:h-full  rounded-xl overflow-hidden shadow-lg border-4 border-blue-500 flex-shrink-0">
+
+          {/* Photo */}
+          <div className="w-80 h-100 sm:w-48 sm:h-48 md:w-64 md:h-64 lg:w-1/4 lg:h-auto rounded-xl overflow-hidden shadow-lg border-2 sm:border-4 border-blue-500 flex-shrink-0">
             <img
               src="./../profil.jpg"
               alt="Arthur Binchet"
-              className="w-full h-full object-cover rounded-xl"
+              className="w-full h-full object-cover"
             />
           </div>
         </div>
@@ -57,7 +62,6 @@ const About = () => {
               className="underline decoration-blue-500 text-xl md:text-2xl lg:text-3xl mb-4 text-center md:text-left"
               style={{
                 pointerEvents: "auto",
-                fontFamily: "Poppins, sans-serif",
                 fontWeight: "bold",
                 marginBottom: "3.5rem",
               }}
