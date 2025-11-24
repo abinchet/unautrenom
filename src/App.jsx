@@ -10,7 +10,7 @@ import CircularGallery from "./caroussel.jsx";
 import Box from "./components/box.jsx";
 import Button from "./button.jsx";
 import Barre from "./Barre.jsx";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Projects from "./pages/Projects";
@@ -164,9 +164,9 @@ function App() {
                         apprendre toujours plus.
                       </p>
                       <div className="flex gap-4 mt-5 justify-center lg:justify-start">
-                        <a href="/about" className="text-blue-500">
+                        <Link to="/about" className="text-blue-500">
                           <Button>En savoir plus</Button>
-                        </a>
+                        </Link>
                       </div>
                     </div>
                   </div>
@@ -443,9 +443,9 @@ function App() {
                     />
                   </div>
                   <div className="flex justify-center mt-10">
-                    <a href="/about" className="mt-5 text-blue-500">
+                    <Link to="/about" className="mt-5 text-blue-500">
                       <Button>En savoir plus</Button>
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </section>
