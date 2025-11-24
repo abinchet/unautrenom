@@ -8,7 +8,7 @@ import TiltedCard from "./components/TiltedCard.jsx";
 import Rond from "./rond.jsx";
 import photoArthur from "./assets/img/moi1.JPG";
 import CircularGallery from "./caroussel.jsx";
-import Box from "./components/box.jsx";
+import Box from "./components/Box.jsx";
 import Button from "./button.jsx";
 import Barre from "./Barre.jsx";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
