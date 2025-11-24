@@ -1,0 +1,120 @@
+#root {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+/* STRUCTURE PRINCIPALE DE L'APP */
+.app-container {
+  width: 100%;
+  scroll-behavior: smooth;
+  position: relative;
+  z-index: 1;
+}
+
+/* SECTIONS */
+.hero-section,
+.projects-section,
+.contact-section {
+  width: 100%;
+  min-height: 100vh;
+}
+.about-section {
+  width: 100%;
+  min-height: 60vh;
+}
+
+/* SCROLL SMOOTH POUR LES SECTIONS */
+html {
+  scroll-behavior: smooth;
+  color: #ffffff;
+}
+
+/* AMÉLIORATIONS POUR LES LIENS DE CONTACT */
+.contact-section a:hover {
+  background: rgba(255, 255, 255, 0.3) !important;
+  transform: translateY(-2px);
+}
+
+/* HEADER - En-tête */
+.header {
+  position: fixed; /* Reste en haut même si on scroll */
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  z-index: 1000; /* Au-dessus de tout */
+  background: transparent;
+  display: flex;
+  justify-content: center;
+}
+
+/* RESPONSIVITÉ POUR LA SECTION ABOUT */
+@media (max-width: 768px) {
+  .about-section {
+    padding: 2rem 1rem !important;
+  }
+
+  .hero-section .titre-principal {
+    font-size: 3rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-section .titre-principal {
+    font-size: 2.5rem !important;
+  }
+}
+
+body {
+  margin: 0;
+  background: linear-gradient(180deg, #0f1724 0%, #071022 100%);
+  position: relative;
+  min-height: 100vh;
+}
+
+/* Le grain vraiment derrière tout */
+body::before {
+  content: "";
+  position: fixed; /* important : ne scrolle pas et reste derrière */
+  inset: 0;
+  z-index: 0; /* 🔥 le force derrière tout le contenu */
+  background: url("/noise-tile.webp") repeat;
+  opacity: 0.4; /* ajuste ici */
+  mix-blend-mode: overlay;
+  pointer-events: none;
+}
+
+/* Scroll progress bar (left side) */
+.scroll-progress {
+  position: fixed;
+  left: 1rem;
+  top: 10vh;
+  bottom: 10vh;
+  width: 6px;
+  background: rgba(255, 255, 255, 0.06); /* track */
+  border-radius: 6px;
+  z-index: 60;
+  overflow: hidden;
+  display: block;
+}
+
+.scroll-progress__bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(180deg, #3b82f6 0%, #60a5fa 100%);
+  width: 100%;
+  height: 0%;
+  border-radius: 6px;
+  transition: height 120ms linear;
+}
+
+/* hide on small screens (optional) */
+@media (max-width: 640px) {
+  .scroll-progress--hide-sm {
+    display: none;
+  }
+}

@@ -1,0 +1,33 @@
+.shadow-b {
+  box-shadow: 0 0 17px 5px rgba(34, 0, 184, 0.5);
+}
+
+.text-xxs {
+  font-size: 10px;
+}
+
+.text-xxxs {
+  font-size: 8px;
+}
+
+.rond-text-responsive {
+  font-size: 8px !important;
+}
+
+@media (min-width: 640px) {
+  .rond-text-responsive {
+    font-size: 16px !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .rond-text-responsive {
+    font-size: 18px !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  .rond-text-responsive {
+    font-size: 20px !important;
+  }
+}
