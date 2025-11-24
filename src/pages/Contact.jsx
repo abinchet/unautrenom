@@ -33,6 +33,10 @@ const Contact = () => {
         body: JSON.stringify(formData),
       });
 
+      if (!response.ok) {
+        throw new Error(`Erreur HTTP: ${response.status}`);
+      }
+
       const data = await response.json();
 
       if (data.success) {
@@ -49,13 +53,13 @@ const Contact = () => {
       } else {
         setSubmitStatus({
           type: "error",
-          message: data.message,
+          message: data.message || "Une erreur est survenue.",
         });
       }
-    } catch {
+    } catch (error) {
       setSubmitStatus({
         type: "error",
-        message: "Erreur de connexion. Veuillez réessayer.",
+        message: error.message || "Erreur de connexion. Veuillez réessayer.",
       });
     } finally {
       setIsSubmitting(false);
