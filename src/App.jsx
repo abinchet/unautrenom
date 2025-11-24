@@ -6,7 +6,6 @@ import Navbar from "./Navbar.jsx";
 import TextType from "./components/TextType.jsx";
 import TiltedCard from "./components/TiltedCard.jsx";
 import Rond from "./rond.jsx";
-import photoArthur from "./assets/img/moi1.JPG";
 import CircularGallery from "./caroussel.jsx";
 import Box from "./components/box.jsx";
 import Button from "./button.jsx";
@@ -125,7 +124,7 @@ function App() {
                   <div className="mb-10 flex flex-col lg:flex-row justify-center items-start w-full max-w-6xl gap-6 lg:gap-12">
                     <div className="flex justify-center lg:justify-start w-full lg:w-auto">
                       <TiltedCard
-                        imageSrc={photoArthur}
+                        imageSrc="/assets/img/moi1.JPG"
                         altText="Arthur BINCHET Picture"
                         captionText="Arthur BINCHET Photo"
                         containerHeight="300px"

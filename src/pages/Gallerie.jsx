@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Navbar from "../Navbar.jsx";
 import Titre from "../Titre.jsx";
 import "./../App.css";
@@ -233,7 +234,7 @@ const Gallerie = () => {
               </a>
             </div>
             <div className="flex justify-center items-center pb-10">
-              <a href="/projects">
+              <Link to="/projects">
                 <Rond
                   style={{
                     width: "120px",
@@ -244,7 +245,7 @@ const Gallerie = () => {
                 >
                   Retour
                 </Rond>
-              </a>
+              </Link>
             </div>
           </div>
         </div>
