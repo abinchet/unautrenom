@@ -39,7 +39,7 @@ const Contact = () => {
 
       setSubmitStatus({
         type: "success",
-        message: "Message envoyé avec succès ! Je vous répondrai bientôt.",
+        message: "Message envoyé avec succès !",
       });
 
       // Réinitialiser le formulaire
