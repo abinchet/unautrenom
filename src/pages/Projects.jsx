@@ -2,7 +2,7 @@ import React from "react";
 import Navbar from "../Navbar.jsx";
 import Titre from "../Titre.jsx";
 import "./../App.css";
-import Box from "../components/Box.jsx";
+import Box from "../components/box.jsx";
 import Button from "./../button.jsx";
 import { Link } from "react-router-dom";
 

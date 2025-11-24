@@ -3,7 +3,7 @@ import Navbar from "../Navbar.jsx";
 import Titre from "../Titre.jsx";
 import "./../App.css";
 import Rond from "../rond.jsx";
-import Box from "../components/Box.jsx";
+import Box from "../components/box.jsx";
 import Barre from "../Barre.jsx";
 
 const Videos = () => {
