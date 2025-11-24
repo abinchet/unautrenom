@@ -25,7 +25,7 @@ const Contact = () => {
     setSubmitStatus(null);
 
     try {
-      const response = await fetch("/send-email.php", {
+      const response = await fetch("https://formspree.io/f/mvgnowbv", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -34,32 +34,24 @@ const Contact = () => {
       });
 
       if (!response.ok) {
-        throw new Error(`Erreur HTTP: ${response.status}`);
+        throw new Error("Erreur lors de l'envoi du message.");
       }
 
-      const data = await response.json();
+      setSubmitStatus({
+        type: "success",
+        message: "Message envoyé avec succès ! Je vous répondrai bientôt.",
+      });
 
-      if (data.success) {
-        setSubmitStatus({
-          type: "success",
-          message: data.message,
-        });
-        // Réinitialiser le formulaire
-        setFormData({
-          name: "",
-          email: "",
-          message: "",
-        });
-      } else {
-        setSubmitStatus({
-          type: "error",
-          message: data.message || "Une erreur est survenue.",
-        });
-      }
+      // Réinitialiser le formulaire
+      setFormData({
+        name: "",
+        email: "",
+        message: "",
+      });
     } catch (error) {
       setSubmitStatus({
         type: "error",
-        message: error.message || "Erreur de connexion. Veuillez réessayer.",
+        message: error.message || "Erreur lors de l'envoi. Veuillez réessayer.",
       });
     } finally {
       setIsSubmitting(false);
