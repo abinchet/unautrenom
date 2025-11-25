@@ -131,16 +131,15 @@ function App() {
               {/* A propos */}
               <section id="a-propos" className="vh-10"></section>
               <section
-                id="a-propos"
-                className="about-section"
+                className="about-section pb-24 sm:pb-20 md:pb-16"
                 style={{
-                  height: "70vh",
                   marginTop: "7rem",
                   width: "100%",
                   display: "flex",
                   justifyContent: "center",
                   alignItems: "center",
                   padding: "0 2rem",
+                  paddingBottom: "4rem",
                 }}
               >
                 <div className="flex flex-col justify-center items-center w-full h-full px-4">
