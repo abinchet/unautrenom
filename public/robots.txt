@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://abinchet.vercel.app/sitemap.xml
