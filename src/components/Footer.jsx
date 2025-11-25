@@ -153,7 +153,7 @@ const Footer = () => {
             </Link>
             <span>•</span>
             <Link
-              to="/mentions-legales"
+              to="/politique-confidentialite"
               className="hover:text-blue-400 transition-colors duration-300"
             >
               Politique de confidentialité

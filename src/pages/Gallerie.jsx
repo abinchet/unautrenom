@@ -17,7 +17,7 @@ const Gallerie = () => {
               fontWeight: "bold",
             }}
           >
-            Ma Gallerie photo
+            Ma Galerie photo
           </Titre>
           <div className="flex flex-col gap-20">
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 items-start">

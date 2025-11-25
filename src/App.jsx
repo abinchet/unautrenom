@@ -25,6 +25,7 @@ import Gallerie from "./pages/Gallerie";
 import Designs from "./pages/Designs";
 import Videos from "./pages/Videos";
 import MentionsLegales from "./pages/MentionsLegales";
+import PolitiqueConfidentialite from "./pages/PolitiqueConfidentialite";
 import ScrollProgress from "./components/ScrollProgress.jsx";
 import "./timeline.css";
 
@@ -192,12 +193,12 @@ function App() {
                       </div>
                     </div>
                   </div>
-                  <div className="flex flex-wrap justify-center lg:justify-between items-center w-full max-w-6xl gap-3 md:gap-6">
-                    <Rond>
+                  <div className="flex flex-wrap justify-center lg:justify-between items-center w-full max-w-6xl gap-2 md:gap-4 lg:gap-6 px-4 md:px-0">
+                    <Rond className="flex-shrink min-w-[100px] max-w-[140px] sm:min-w-[120px] sm:max-w-[160px] lg:flex-1 lg:max-w-none">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
-                        width="24"
-                        height="24"
+                        width="20"
+                        height="20"
                         viewBox="0 0 24 24"
                         fill="none"
                         stroke="currentColor"
@@ -211,10 +212,18 @@ function App() {
                       </svg>
                       Angoulême
                     </Rond>
-                    <Rond>Dev Web</Rond>
-                    <Rond>Photographie</Rond>
-                    <Rond>Design</Rond>
-                    <Rond>Montage</Rond>
+                    <Rond className="flex-shrink min-w-[100px] max-w-[140px] sm:min-w-[120px] sm:max-w-[160px] lg:flex-1 lg:max-w-none">
+                      Dev Web
+                    </Rond>
+                    <Rond className="flex-shrink min-w-[100px] max-w-[140px] sm:min-w-[120px] sm:max-w-[160px] lg:flex-1 lg:max-w-none">
+                      Photographie
+                    </Rond>
+                    <Rond className="flex-shrink min-w-[100px] max-w-[140px] sm:min-w-[120px] sm:max-w-[160px] lg:flex-1 lg:max-w-none">
+                      Design
+                    </Rond>
+                    <Rond className="flex-shrink min-w-[100px] max-w-[140px] sm:min-w-[120px] sm:max-w-[160px] lg:flex-1 lg:max-w-none">
+                      Montage
+                    </Rond>
                   </div>
                 </div>
               </section>
@@ -679,6 +688,15 @@ function App() {
           element={
             <>
               <MentionsLegales />
+              <Footer />
+            </>
+          }
+        />
+        <Route
+          path="/politique-confidentialite"
+          element={
+            <>
+              <PolitiqueConfidentialite />
               <Footer />
             </>
           }
