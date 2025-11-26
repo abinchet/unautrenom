@@ -364,7 +364,7 @@ function App() {
                 </div>
                 <div className="gap-15 mt-5 justify-center items-center flex">
                   <a
-                    href="/BINCHETArthurCV.pdf"
+                    href="/CV_Arthur_BINCHET.pdf"
                     download
                     className="text-blue-500 pb-10"
                   >
