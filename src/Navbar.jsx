@@ -6,18 +6,17 @@ const Navbar = () => {
 
   return (
     <div
-      className="flex justify-between items-center px-8 py-4 rounded-full border border-gray-400 backdrop-blur-md shadow-2xl bg-black/30"
       style={{
         position: "fixed",
         top: "20px",
         left: "50%",
         transform: "translateX(-50%)",
         zIndex: 100,
-        width: "90%",
         maxWidth: "800px",
         boxShadow:
           "0 8px 32px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.1)",
       }}
+      className="flex justify-between items-center px-8 sm:px-8 py-4 rounded-full border border-gray-400 backdrop-blur-md shadow-2xl bg-black/30 w-[60%] sm:w-[90%]"
     >
       <div className="flex items-center">
         <Link
