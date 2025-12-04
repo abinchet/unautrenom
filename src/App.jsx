@@ -27,6 +27,7 @@ import Videos from "./pages/Videos";
 import MentionsLegales from "./pages/MentionsLegales";
 import PolitiqueConfidentialite from "./pages/PolitiqueConfidentialite";
 import ScrollProgress from "./components/ScrollProgress.jsx";
+import { Analytics } from "@vercel/analytics/react";
 import "./timeline.css";
 
 function ScrollToTop() {
@@ -701,6 +702,7 @@ function App() {
           }
         />
       </Routes>
+      <Analytics />
     </Router>
   );
 }
