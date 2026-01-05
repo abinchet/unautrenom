@@ -141,7 +141,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-center items-center md:justify-between md:items-center">
           <div>
             <p className="text-gray-400 text-sm md:text-base mb-2">
-              © 2025 Arthur BINCHET - Tous droits réservés
+              © {new Date().getFullYear()} Arthur BINCHET - Tous droits réservés
             </p>
           </div>
           <div className="flex justify-center gap-4 text-xs md:text-sm text-gray-500">
