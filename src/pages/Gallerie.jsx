@@ -24,63 +24,63 @@ const Gallerie = () => {
               <div className="h-64 overflow-hidden">
                 <img
                   className="w-full h-full object-cover rounded-lg"
-                  src="/gallerie/inte2.jpg"
+                  src="/gallerie/inte2.webp"
                   alt="Journée d'intégration MMI"
                 />
               </div>
               <div className="h-64 overflow-hidden">
                 <img
                   className="w-full h-full object-cover rounded-lg"
-                  src="/gallerie/e1.jpg"
+                  src="/gallerie/e1.webp"
                   alt="Match Basket"
                 />
               </div>
               <div className="h-64 overflow-hidden">
                 <img
                   className="w-full h-full object-cover rounded-lg"
-                  src="/gallerie/7.jpg"
+                  src="/gallerie/7.webp"
                   alt="Entrainement Rugby"
                 />
               </div>
               <div className="h-64 overflow-hidden">
                 <img
                   className="w-full h-full object-cover rounded-lg"
-                  src="/gallerie/am.jpg"
+                  src="/gallerie/am.webp"
                   alt="Match Handball"
                 />
               </div>
               <div className="h-64 overflow-hidden">
                 <img
                   className="w-full h-full object-cover rounded-lg"
-                  src="/gallerie/inte1.jpg"
+                  src="/gallerie/inte1.webp"
                   alt="Journée d'intégration MMI"
                 />
               </div>
               <div className="h-64 overflow-hidden">
                 <img
                   className="w-full h-full object-cover rounded-lg"
-                  src="/gallerie/blue.jpg"
+                  src="/gallerie/blue.webp"
                   alt="Match Handball"
                 />
               </div>
               <div className="h-64 overflow-hidden">
                 <img
                   className="w-full h-full object-cover rounded-lg"
-                  src="/gallerie/team.jpg"
+                  src="/gallerie/team.webp"
                   alt="Match Handball"
                 />
               </div>
               <div className="h-64 overflow-hidden">
                 <img
                   className="w-full h-full object-cover rounded-lg"
-                  src="/gallerie/tom.jpg"
+                  src="/gallerie/tom.webp"
                   alt="Match Handball"
                 />
               </div>
               <div className="h-64 overflow-hidden">
                 <img
                   className="w-full h-full object-cover rounded-lg"
-                  src="/gallerie/inte3.jpg"
+                  src="/gallerie/inte3.webp"
                   alt="Journée d'intégration MMI"
                 />
               </div>
@@ -90,105 +90,105 @@ const Gallerie = () => {
               <div className="h-80 sm:h-96 overflow-hidden">
                 <img
                   className="w-full h-full object-cover rounded-lg"
-                  src="/gallerie/clement.jpg"
+                  src="/gallerie/clement.webp"
                   alt="BasketBall"
                 />
               </div>
               <div className="h-80 sm:h-96 overflow-hidden">
                 <img
                   className="w-full h-full object-cover rounded-lg"
-                  src="/gallerie/louise.jpg"
+                  src="/gallerie/louise.webp"
                   alt="Match Basket"
                 />
               </div>
               <div className="h-80 sm:h-96 overflow-hidden">
                 <img
                   className="w-full h-full object-cover rounded-lg"
-                  src="/gallerie/hedi2.jpg"
+                  src="/gallerie/hedi2.webp"
                   alt="Entrainement MMA"
                 />
               </div>
               <div className="h-80 sm:h-96 overflow-hidden">
                 <img
                   className="w-full h-full object-cover rounded-lg"
-                  src="/gallerie/ethan.jpg"
+                  src="/gallerie/ethan.webp"
                   alt="Match Football"
                 />
               </div>
               <div className="h-80 sm:h-96 overflow-hidden">
                 <img
                   className="w-full h-full object-cover rounded-lg"
-                  src="/gallerie/mathysnb.jpg"
+                  src="/gallerie/mathysnb.webp"
                   alt="Shooting"
                 />
               </div>
               <div className="h-80 sm:h-96 overflow-hidden">
                 <img
                   className="w-full h-full object-cover rounded-lg"
-                  src="/gallerie/tom2.jpg"
+                  src="/gallerie/tom2.webp"
                   alt="Match Handball"
                 />
               </div>
               <div className="h-80 sm:h-96 overflow-hidden">
                 <img
                   className="w-full h-full object-cover rounded-lg"
-                  src="/gallerie/8.jpg"
+                  src="/gallerie/8.webp"
                   alt="Match Handball"
                 />
               </div>
               <div className="h-80 sm:h-96 overflow-hidden">
                 <img
                   className="w-full h-full object-cover rounded-lg"
-                  src="/gallerie/basket1.jpg"
+                  src="/gallerie/basket1.webp"
                   alt="Match Basket"
                 />
               </div>
               <div className="h-80 sm:h-96 overflow-hidden">
                 <img
                   className="w-full h-full object-cover rounded-lg"
-                  src="/gallerie/hedi.jpg"
+                  src="/gallerie/hedi.webp"
                   alt="Entrainement MMA"
                 />
               </div>
               <div className="h-80 sm:h-96 overflow-hidden">
                 <img
                   className="w-full h-full object-cover rounded-lg"
-                  src="/gallerie/shoot.jpg"
+                  src="/gallerie/shoot.webp"
                   alt="Shooting"
                 />
               </div>
               <div className="h-80 sm:h-96 overflow-hidden">
                 <img
                   className="w-full h-full object-cover rounded-lg"
-                  src="/gallerie/gero.jpg"
+                  src="/gallerie/gero.webp"
                   alt="Match Pétanque"
                 />
               </div>
               <div className="h-80 sm:h-96 overflow-hidden">
                 <img
                   className="w-full h-full object-cover rounded-lg"
-                  src="/gallerie/jc.JPG"
+                  src="/gallerie/jc.webp"
                   alt="Match Handball"
                 />
               </div>
               <div className="h-80 sm:h-96 overflow-hidden">
                 <img
                   className="w-full h-full object-cover rounded-lg"
-                  src="/gallerie/maia.jpg"
+                  src="/gallerie/maia.webp"
                   alt="Match Handball"
                 />
               </div>
               <div className="h-80 sm:h-96 overflow-hidden">
                 <img
                   className="w-full h-full object-cover rounded-lg"
-                  src="/gallerie/lucas.jpg"
+                  src="/gallerie/lucas.webp"
                   alt="Shooting"
                 />
               </div>
               <div className="h-80 sm:h-96 overflow-hidden">
                 <img
                   className="w-full h-full object-cover rounded-lg"
-                  src="/gallerie/79.jpg"
+                  src="/gallerie/79.webp"
                   alt="Match Handball"
                 />
               </div>
