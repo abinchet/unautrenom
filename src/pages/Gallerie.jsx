@@ -47,6 +47,7 @@ const Gallerie = () => {
                   className="w-full h-full object-cover rounded-lg"
                   src="/gallerie/am.webp"
                   alt="Match Handball"
+                  loading="lazy"
                 />
               </div>
               <div className="h-64 overflow-hidden">
@@ -54,6 +55,7 @@ const Gallerie = () => {
                   className="w-full h-full object-cover rounded-lg"
                   src="/gallerie/inte1.webp"
                   alt="Journée d'intégration MMI"
+                  loading="lazy"
                 />
               </div>
               <div className="h-64 overflow-hidden">
@@ -61,6 +63,7 @@ const Gallerie = () => {
                   className="w-full h-full object-cover rounded-lg"
                   src="/gallerie/blue.webp"
                   alt="Match Handball"
+                  loading="lazy"
                 />
               </div>
               <div className="h-64 overflow-hidden">
@@ -68,6 +71,7 @@ const Gallerie = () => {
                   className="w-full h-full object-cover rounded-lg"
                   src="/gallerie/team.webp"
                   alt="Match Handball"
+                  loading="lazy"
                 />
               </div>
               <div className="h-64 overflow-hidden">
@@ -75,6 +79,7 @@ const Gallerie = () => {
                   className="w-full h-full object-cover rounded-lg"
                   src="/gallerie/tom.webp"
                   alt="Match Handball"
+                  loading="lazy"
                 />
               </div>
               <div className="h-64 overflow-hidden">
@@ -82,6 +87,7 @@ const Gallerie = () => {
                   className="w-full h-full object-cover rounded-lg"
                   src="/gallerie/inte3.webp"
                   alt="Journée d'intégration MMI"
+                  loading="lazy"
                 />
               </div>
             </div>
@@ -92,6 +98,7 @@ const Gallerie = () => {
                   className="w-full h-full object-cover rounded-lg"
                   src="/gallerie/clement.webp"
                   alt="BasketBall"
+                  loading="lazy"
                 />
               </div>
               <div className="h-80 sm:h-96 overflow-hidden">
@@ -99,6 +106,7 @@ const Gallerie = () => {
                   className="w-full h-full object-cover rounded-lg"
                   src="/gallerie/louise.webp"
                   alt="Match Basket"
+                  loading="lazy"
                 />
               </div>
               <div className="h-80 sm:h-96 overflow-hidden">
@@ -106,6 +114,7 @@ const Gallerie = () => {
                   className="w-full h-full object-cover rounded-lg"
                   src="/gallerie/hedi2.webp"
                   alt="Entrainement MMA"
+                  loading="lazy"
                 />
               </div>
               <div className="h-80 sm:h-96 overflow-hidden">
@@ -113,6 +122,7 @@ const Gallerie = () => {
                   className="w-full h-full object-cover rounded-lg"
                   src="/gallerie/ethan.webp"
                   alt="Match Football"
+                  loading="lazy"
                 />
               </div>
               <div className="h-80 sm:h-96 overflow-hidden">
@@ -120,6 +130,7 @@ const Gallerie = () => {
                   className="w-full h-full object-cover rounded-lg"
                   src="/gallerie/mathysnb.webp"
                   alt="Shooting"
+                  loading="lazy"
                 />
               </div>
               <div className="h-80 sm:h-96 overflow-hidden">
@@ -127,6 +138,7 @@ const Gallerie = () => {
                   className="w-full h-full object-cover rounded-lg"
                   src="/gallerie/tom2.webp"
                   alt="Match Handball"
+                  loading="lazy"
                 />
               </div>
               <div className="h-80 sm:h-96 overflow-hidden">
@@ -134,6 +146,7 @@ const Gallerie = () => {
                   className="w-full h-full object-cover rounded-lg"
                   src="/gallerie/8.webp"
                   alt="Match Handball"
+                  loading="lazy"
                 />
               </div>
               <div className="h-80 sm:h-96 overflow-hidden">
@@ -141,6 +154,7 @@ const Gallerie = () => {
                   className="w-full h-full object-cover rounded-lg"
                   src="/gallerie/basket1.webp"
                   alt="Match Basket"
+                  loading="lazy"
                 />
               </div>
               <div className="h-80 sm:h-96 overflow-hidden">
@@ -148,6 +162,7 @@ const Gallerie = () => {
                   className="w-full h-full object-cover rounded-lg"
                   src="/gallerie/hedi.webp"
                   alt="Entrainement MMA"
+                  loading="lazy"
                 />
               </div>
               <div className="h-80 sm:h-96 overflow-hidden">
@@ -155,6 +170,7 @@ const Gallerie = () => {
                   className="w-full h-full object-cover rounded-lg"
                   src="/gallerie/shoot.webp"
                   alt="Shooting"
+                  loading="lazy"
                 />
               </div>
               <div className="h-80 sm:h-96 overflow-hidden">
@@ -162,6 +178,7 @@ const Gallerie = () => {
                   className="w-full h-full object-cover rounded-lg"
                   src="/gallerie/gero.webp"
                   alt="Match Pétanque"
+                  loading="lazy"
                 />
               </div>
               <div className="h-80 sm:h-96 overflow-hidden">
@@ -169,6 +186,7 @@ const Gallerie = () => {
                   className="w-full h-full object-cover rounded-lg"
                   src="/gallerie/jc.webp"
                   alt="Match Handball"
+                  loading="lazy"
                 />
               </div>
               <div className="h-80 sm:h-96 overflow-hidden">
@@ -176,6 +194,7 @@ const Gallerie = () => {
                   className="w-full h-full object-cover rounded-lg"
                   src="/gallerie/maia.webp"
                   alt="Match Handball"
+                  loading="lazy"
                 />
               </div>
               <div className="h-80 sm:h-96 overflow-hidden">
@@ -183,6 +202,7 @@ const Gallerie = () => {
                   className="w-full h-full object-cover rounded-lg"
                   src="/gallerie/lucas.webp"
                   alt="Shooting"
+                  loading="lazy"
                 />
               </div>
               <div className="h-80 sm:h-96 overflow-hidden">
@@ -190,6 +210,7 @@ const Gallerie = () => {
                   className="w-full h-full object-cover rounded-lg"
                   src="/gallerie/79.webp"
                   alt="Match Handball"
+                  loading="lazy"
                 />
               </div>
             </div>
