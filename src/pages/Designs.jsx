@@ -25,7 +25,7 @@ const Designs = () => {
               <div className="h-115 w-65 overflow-hidden">
                 <img
                   className="w-full h-full object-cover rounded-lg"
-                  src="/designs/dd.png"
+                  src="/designs/dd.webp"
                   alt="Design"
                 />
               </div>
@@ -40,7 +40,7 @@ const Designs = () => {
               <div className="h-115 w-65 overflow-hidden">
                 <img
                   className="w-full h-full object-cover rounded-lg"
-                  src="/designs/dort.png"
+                  src="/designs/dort.webp"
                   alt="Design"
                   loading="lazy"
                 />
@@ -48,7 +48,7 @@ const Designs = () => {
               <div className="h-115 w-65 overflow-hidden">
                 <img
                   className="w-full h-full object-cover rounded-lg"
-                  src="/designs/bo.png"
+                  src="/designs/bo.webp"
                   alt="Design"
                   loading="lazy"
                 />
@@ -56,7 +56,7 @@ const Designs = () => {
               <div className="h-115 w-65 overflow-hidden">
                 <img
                   className="w-full h-full object-cover rounded-lg"
-                  src="/designs/kyrie.png"
+                  src="/designs/kyrie.webp"
                   alt="Design"
                   loading="lazy"
                 />
@@ -64,7 +64,7 @@ const Designs = () => {
               <div className="h-115 w-65 overflow-hidden">
                 <img
                   className="w-full h-full object-cover rounded-lg"
-                  src="/designs/dd2.png"
+                  src="/designs/dd2.webp"
                   alt="Design"
                   loading="lazy"
                 />
@@ -80,7 +80,7 @@ const Designs = () => {
               <div className="h-115 w-65 overflow-hidden">
                 <img
                   className="w-full h-full object-cover rounded-lg"
-                  src="/designs/methalie.png"
+                  src="/designs/methalie.webp"
                   alt="Design"
                   loading="lazy"
                 />
@@ -88,7 +88,7 @@ const Designs = () => {
               <div className="h-115 w-65 overflow-hidden">
                 <img
                   className="w-full h-full object-cover rounded-lg"
-                  src="/designs/finale.png"
+                  src="/designs/finale.webp"
                   alt="Design"
                   loading="lazy"
                 />
@@ -96,7 +96,7 @@ const Designs = () => {
               <div className="h-90 w-65 overflow-hidden">
                 <img
                   className="w-full h-full object-cover rounded-lg"
-                  src="/designs/derby.png"
+                  src="/designs/derby.webp"
                   alt="Design"
                   loading="lazy"
                 />
@@ -104,7 +104,7 @@ const Designs = () => {
               <div className="h-90 w-65 overflow-hidden">
                 <img
                   className="w-full h-full object-cover rounded-lg"
-                  src="/designs/gidsel.png"
+                  src="/designs/gidsel.webp"
                   aalt="Design"
                   loading="lazy"
                 />
@@ -112,7 +112,7 @@ const Designs = () => {
               <div className="h-90 w-65 overflow-hidden">
                 <img
                   className="w-full h-full object-cover rounded-lg"
-                  src="/designs/vaki.png"
+                  src="/designs/vaki.webp"
                   alt="Design"
                   loading="lazy"
                 />

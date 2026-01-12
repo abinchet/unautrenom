@@ -147,7 +147,7 @@ function App() {
                   <div className="mb-10 flex flex-col lg:flex-row justify-center items-start w-full max-w-6xl gap-6 lg:gap-12">
                     <div className="flex justify-center lg:justify-start w-full lg:w-auto">
                       <TiltedCard
-                        imageSrc="/assets/img/moi1.JPG"
+                        imageSrc="/assets/img/moi1.webp"
                         altText="Arthur BINCHET Picture"
                         captionText="Arthur BINCHET Photo"
                         containerHeight="300px"
