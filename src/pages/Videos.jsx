@@ -36,7 +36,7 @@ const Videos = () => {
                     className="group relative block w-full h-full"
                   >
                     <img
-                      src="projet1.png"
+                      src="projet1.webp"
                       alt="Screen d'une expérience inédite"
                       style={{
                         width: "100%",
@@ -135,7 +135,7 @@ const Videos = () => {
                     className="group relative block w-full h-full"
                   >
                     <img
-                      src="ombre.png"
+                      src="ombre.webp"
                       alt="Screen de l'ombre"
                       style={{
                         width: "100%",
@@ -225,8 +225,9 @@ const Videos = () => {
                     className="group relative block w-full h-full"
                   >
                     <img
-                      src="maif.png"
+                      src="maif.webp"
                       alt="Screen de la vidéo MAIF"
+                      loading="lazy"
                       style={{
                         width: "100%",
                         height: "100%",
@@ -334,8 +335,9 @@ const Videos = () => {
                     className="group relative block w-full h-full"
                   >
                     <img
-                      src="???"
+                      src="agacement.webp"
                       alt="Pas encore disponible"
+                      loading="lazy"
                       style={{
                         width: "100%",
                         height: "100%",

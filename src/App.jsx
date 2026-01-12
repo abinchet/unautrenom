@@ -498,7 +498,7 @@ function App() {
                           <div style={{ width: "100%", height: "120px" }}>
                             <img
                               href="https://www.youtube.com/watch?v=3sGPWYlTL"
-                              src="projet1.png"
+                              src="projet1.webp"
                               alt="Screen d'une expérience inédite"
                               style={{
                                 width: "100%",
@@ -562,7 +562,7 @@ function App() {
                           <div style={{ width: "100%", height: "120px" }}>
                             <a href="https://drive.google.com/drive/folders/1yXrkn2ATn9LeiQbIEplQX6epUG-1oxNA?usp=drive_link">
                               <img
-                                src="projet2.jpg"
+                                src="projet2.webp"
                                 alt="Photo journée intégration"
                                 style={{
                                   width: "100%",

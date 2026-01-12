@@ -225,7 +225,7 @@ const Contact = () => {
             {/* Photo avec overlay à gauche */}
             <div className="w-full lg:w-1/2 relative rounded-xl overflow-hidden shadow-xl min-h-[300px] lg:min-h-[450px]">
               <img
-                src="/pdp.png"
+                src="/pdp.webp"
                 alt="Photo de contact"
                 className="w-full h-full object-cover"
               />

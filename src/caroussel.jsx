@@ -373,39 +373,39 @@ class App {
   createMedias(items, bend = 1, textColor, borderRadius, font) {
     const defaultItems = [
       {
-        image: `/assets/img/mathysnb.jpg`,
+        image: `/assets/img/mathysnb.webp`,
         text: "",
       },
       {
-        image: `/assets/img/tom.jpg`,
+        image: `/assets/img/tom.webp`,
         text: "",
       },
       {
-        image: `/assets/img/hedi1.jpg`,
+        image: `/assets/img/hedi1.webp`,
         text: "",
       },
       {
-        image: `/assets/img/gero.jpg`,
+        image: `/assets/img/gero.webp`,
         text: "",
       },
       {
-        image: `/assets/img/maia.jpg`,
+        image: `/assets/img/maia.webp`,
         text: "",
       },
       {
-        image: `/assets/img/clem.jpg`,
+        image: `/assets/img/clem.webp`,
         text: "",
       },
       {
-        image: `/assets/img/lucas.jpg`,
+        image: `/assets/img/lucas.webp`,
         text: "",
       },
       {
-        image: `/assets/img/etec1.jpg`,
+        image: `/assets/img/etec1.webp`,
         text: "",
       },
       {
-        image: `/assets/img/8.jpg`,
+        image: `/assets/img/8.webp`,
         text: "",
       },
     ];
