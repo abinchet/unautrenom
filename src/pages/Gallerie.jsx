@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Navbar from "../Navbar.jsx";
 import Titre from "../Titre.jsx";
@@ -6,6 +6,16 @@ import "./../App.css";
 import Rond from "../rond.jsx";
 
 const Gallerie = () => {
+  const [selectedImage, setSelectedImage] = useState(null);
+
+  const openImage = (src, alt) => {
+    setSelectedImage({ src, alt });
+  };
+
+  const closeImage = () => {
+    setSelectedImage(null);
+  };
+
   return (
     <>
       <Navbar />
@@ -19,72 +29,116 @@ const Gallerie = () => {
           >
             Ma Galerie photo
           </Titre>
+          <div class="full-size">
+            <img src="" alt="" />
+          </div>
           <div className="flex flex-col gap-20">
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 items-start">
-              <div className="h-64 overflow-hidden">
+              <div
+                className="h-64 overflow-hidden cursor-pointer"
+                onClick={() =>
+                  openImage("/gallerie/inte2.webp", "Journée d'intégration MMI")
+                }
+              >
                 <img
-                  className="w-full h-full object-cover rounded-lg"
+                  className="w-full h-full object-cover rounded-lg hover:opacity-80 transition-opacity"
                   src="/gallerie/inte2.webp"
                   alt="Journée d'intégration MMI"
                 />
               </div>
-              <div className="h-64 overflow-hidden">
+              <div
+                className="h-64 overflow-hidden cursor-pointer"
+                onClick={() => openImage("/gallerie/e1.webp", "Match Basket")}
+              >
                 <img
-                  className="w-full h-full object-cover rounded-lg"
+                  className="w-full h-full object-cover rounded-lg hover:opacity-80 transition-opacity"
                   src="/gallerie/e1.webp"
                   alt="Match Basket"
                 />
               </div>
-              <div className="h-64 overflow-hidden">
+              <div
+                className="h-64 overflow-hidden cursor-pointer"
+                onClick={() =>
+                  openImage("/gallerie/7.webp", "Entrainement Rugby")
+                }
+              >
                 <img
-                  className="w-full h-full object-cover rounded-lg"
+                  className="w-full h-full object-cover rounded-lg hover:opacity-80 transition-opacity"
                   src="/gallerie/7.webp"
                   alt="Entrainement Rugby"
                 />
               </div>
-              <div className="h-64 overflow-hidden">
+              <div
+                className="h-64 overflow-hidden cursor-pointer"
+                onClick={() => openImage("/gallerie/am.webp", "Match Handball")}
+              >
                 <img
-                  className="w-full h-full object-cover rounded-lg"
+                  className="w-full h-full object-cover rounded-lg hover:opacity-80 transition-opacity"
                   src="/gallerie/am.webp"
                   alt="Match Handball"
                   loading="lazy"
                 />
               </div>
-              <div className="h-64 overflow-hidden">
+              <div
+                className="h-64 overflow-hidden cursor-pointer"
+                onClick={() =>
+                  openImage("/gallerie/inte1.webp", "Journée d'intégration MMI")
+                }
+              >
                 <img
-                  className="w-full h-full object-cover rounded-lg"
+                  className="w-full h-full object-cover rounded-lg hover:opacity-80 transition-opacity"
                   src="/gallerie/inte1.webp"
                   alt="Journée d'intégration MMI"
                   loading="lazy"
                 />
               </div>
-              <div className="h-64 overflow-hidden">
+              <div
+                className="h-64 overflow-hidden cursor-pointer"
+                onClick={() =>
+                  openImage("/gallerie/blue.webp", "Match Handball")
+                }
+              >
                 <img
-                  className="w-full h-full object-cover rounded-lg"
+                  className="w-full h-full object-cover rounded-lg hover:opacity-80 transition-opacity"
                   src="/gallerie/blue.webp"
                   alt="Match Handball"
                   loading="lazy"
                 />
               </div>
-              <div className="h-64 overflow-hidden">
+              <div
+                className="h-64 overflow-hidden cursor-pointer"
+                onClick={() =>
+                  openImage("/gallerie/team.webp", "Match Handball")
+                }
+              >
                 <img
-                  className="w-full h-full object-cover rounded-lg"
+                  className="w-full h-full object-cover rounded-lg hover:opacity-80 transition-opacity"
                   src="/gallerie/team.webp"
                   alt="Match Handball"
                   loading="lazy"
                 />
               </div>
-              <div className="h-64 overflow-hidden">
+              <div
+                className="h-64 overflow-hidden cursor-pointer"
+                onClick={() =>
+                  openImage("/gallerie/tom.webp", "Match Handball")
+                }
+              >
                 <img
-                  className="w-full h-full object-cover rounded-lg"
+                  className="w-full h-full object-cover rounded-lg hover:opacity-80 transition-opacity"
                   src="/gallerie/tom.webp"
                   alt="Match Handball"
                   loading="lazy"
                 />
               </div>
-              <div className="h-64 overflow-hidden">
+              <div
+                className="h-64 overflow-hidden cursor-pointer"
+                onClick={() =>
+                  openImage("/gallerie/inte3.webp", "Journée d'intégration MMI")
+                }
+              >
                 <img
-                  className="w-full h-full object-cover rounded-lg"
+                  className="w-full h-full object-cover rounded-lg hover:opacity-80 transition-opacity"
                   src="/gallerie/inte3.webp"
                   alt="Journée d'intégration MMI"
                   loading="lazy"
@@ -93,121 +147,184 @@ const Gallerie = () => {
             </div>
             {/*Photos vertical*/}
             <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 items-start">
-              <div className="h-80 sm:h-96 overflow-hidden">
+              <div
+                className="h-80 sm:h-96 overflow-hidden cursor-pointer"
+                onClick={() =>
+                  openImage("/gallerie/clement.webp", "BasketBall")
+                }
+              >
                 <img
-                  className="w-full h-full object-cover rounded-lg"
+                  className="w-full h-full object-cover rounded-lg hover:opacity-80 transition-opacity"
                   src="/gallerie/clement.webp"
                   alt="BasketBall"
                   loading="lazy"
                 />
               </div>
-              <div className="h-80 sm:h-96 overflow-hidden">
+              <div
+                className="h-80 sm:h-96 overflow-hidden cursor-pointer"
+                onClick={() =>
+                  openImage("/gallerie/louise.webp", "Match Basket")
+                }
+              >
                 <img
-                  className="w-full h-full object-cover rounded-lg"
+                  className="w-full h-full object-cover rounded-lg hover:opacity-80 transition-opacity"
                   src="/gallerie/louise.webp"
                   alt="Match Basket"
                   loading="lazy"
                 />
               </div>
-              <div className="h-80 sm:h-96 overflow-hidden">
+              <div
+                className="h-80 sm:h-96 overflow-hidden cursor-pointer"
+                onClick={() =>
+                  openImage("/gallerie/hedi2.webp", "Entrainement MMA")
+                }
+              >
                 <img
-                  className="w-full h-full object-cover rounded-lg"
+                  className="w-full h-full object-cover rounded-lg hover:opacity-80 transition-opacity"
                   src="/gallerie/hedi2.webp"
                   alt="Entrainement MMA"
                   loading="lazy"
                 />
               </div>
-              <div className="h-80 sm:h-96 overflow-hidden">
+              <div
+                className="h-80 sm:h-96 overflow-hidden cursor-pointer"
+                onClick={() =>
+                  openImage("/gallerie/ethan.webp", "Match Football")
+                }
+              >
                 <img
-                  className="w-full h-full object-cover rounded-lg"
+                  className="w-full h-full object-cover rounded-lg hover:opacity-80 transition-opacity"
                   src="/gallerie/ethan.webp"
                   alt="Match Football"
                   loading="lazy"
                 />
               </div>
-              <div className="h-80 sm:h-96 overflow-hidden">
+              <div
+                className="h-80 sm:h-96 overflow-hidden cursor-pointer"
+                onClick={() => openImage("/gallerie/mathysnb.webp", "Shooting")}
+              >
                 <img
-                  className="w-full h-full object-cover rounded-lg"
+                  className="w-full h-full object-cover rounded-lg hover:opacity-80 transition-opacity"
                   src="/gallerie/mathysnb.webp"
                   alt="Shooting"
                   loading="lazy"
                 />
               </div>
-              <div className="h-80 sm:h-96 overflow-hidden">
+              <div
+                className="h-80 sm:h-96 overflow-hidden cursor-pointer"
+                onClick={() =>
+                  openImage("/gallerie/tom2.webp", "Match Handball")
+                }
+              >
                 <img
-                  className="w-full h-full object-cover rounded-lg"
+                  className="w-full h-full object-cover rounded-lg hover:opacity-80 transition-opacity"
                   src="/gallerie/tom2.webp"
                   alt="Match Handball"
                   loading="lazy"
                 />
               </div>
-              <div className="h-80 sm:h-96 overflow-hidden">
+              <div
+                className="h-80 sm:h-96 overflow-hidden cursor-pointer"
+                onClick={() => openImage("/gallerie/8.webp", "Match Handball")}
+              >
                 <img
-                  className="w-full h-full object-cover rounded-lg"
+                  className="w-full h-full object-cover rounded-lg hover:opacity-80 transition-opacity"
                   src="/gallerie/8.webp"
                   alt="Match Handball"
                   loading="lazy"
                 />
               </div>
-              <div className="h-80 sm:h-96 overflow-hidden">
+              <div
+                className="h-80 sm:h-96 overflow-hidden cursor-pointer"
+                onClick={() =>
+                  openImage("/gallerie/basket1.webp", "Match Basket")
+                }
+              >
                 <img
-                  className="w-full h-full object-cover rounded-lg"
+                  className="w-full h-full object-cover rounded-lg hover:opacity-80 transition-opacity"
                   src="/gallerie/basket1.webp"
                   alt="Match Basket"
                   loading="lazy"
                 />
               </div>
-              <div className="h-80 sm:h-96 overflow-hidden">
+              <div
+                className="h-80 sm:h-96 overflow-hidden cursor-pointer"
+                onClick={() =>
+                  openImage("/gallerie/hedi.webp", "Entrainement MMA")
+                }
+              >
                 <img
-                  className="w-full h-full object-cover rounded-lg"
+                  className="w-full h-full object-cover rounded-lg hover:opacity-80 transition-opacity"
                   src="/gallerie/hedi.webp"
                   alt="Entrainement MMA"
                   loading="lazy"
                 />
               </div>
-              <div className="h-80 sm:h-96 overflow-hidden">
+              <div
+                className="h-80 sm:h-96 overflow-hidden cursor-pointer"
+                onClick={() => openImage("/gallerie/shoot.webp", "Shooting")}
+              >
                 <img
-                  className="w-full h-full object-cover rounded-lg"
+                  className="w-full h-full object-cover rounded-lg hover:opacity-80 transition-opacity"
                   src="/gallerie/shoot.webp"
                   alt="Shooting"
                   loading="lazy"
                 />
               </div>
-              <div className="h-80 sm:h-96 overflow-hidden">
+              <div
+                className="h-80 sm:h-96 overflow-hidden cursor-pointer"
+                onClick={() =>
+                  openImage("/gallerie/gero.webp", "Match Pétanque")
+                }
+              >
                 <img
-                  className="w-full h-full object-cover rounded-lg"
+                  className="w-full h-full object-cover rounded-lg hover:opacity-80 transition-opacity"
                   src="/gallerie/gero.webp"
                   alt="Match Pétanque"
                   loading="lazy"
                 />
               </div>
-              <div className="h-80 sm:h-96 overflow-hidden">
+              <div
+                className="h-80 sm:h-96 overflow-hidden cursor-pointer"
+                onClick={() => openImage("/gallerie/jc.webp", "Match Handball")}
+              >
                 <img
-                  className="w-full h-full object-cover rounded-lg"
+                  className="w-full h-full object-cover rounded-lg hover:opacity-80 transition-opacity"
                   src="/gallerie/jc.webp"
                   alt="Match Handball"
                   loading="lazy"
                 />
               </div>
-              <div className="h-80 sm:h-96 overflow-hidden">
+              <div
+                className="h-80 sm:h-96 overflow-hidden cursor-pointer"
+                onClick={() =>
+                  openImage("/gallerie/maia.webp", "Match Handball")
+                }
+              >
                 <img
-                  className="w-full h-full object-cover rounded-lg"
+                  className="w-full h-full object-cover rounded-lg hover:opacity-80 transition-opacity"
                   src="/gallerie/maia.webp"
                   alt="Match Handball"
                   loading="lazy"
                 />
               </div>
-              <div className="h-80 sm:h-96 overflow-hidden">
+              <div
+                className="h-80 sm:h-96 overflow-hidden cursor-pointer"
+                onClick={() => openImage("/gallerie/lucas.webp", "Shooting")}
+              >
                 <img
-                  className="w-full h-full object-cover rounded-lg"
+                  className="w-full h-full object-cover rounded-lg hover:opacity-80 transition-opacity"
                   src="/gallerie/lucas.webp"
                   alt="Shooting"
                   loading="lazy"
                 />
               </div>
-              <div className="h-80 sm:h-96 overflow-hidden">
+              <div
+                className="h-80 sm:h-96 overflow-hidden cursor-pointer"
+                onClick={() => openImage("/gallerie/79.webp", "Match Handball")}
+              >
                 <img
-                  className="w-full h-full object-cover rounded-lg"
+                  className="w-full h-full object-cover rounded-lg hover:opacity-80 transition-opacity"
                   src="/gallerie/79.webp"
                   alt="Match Handball"
                   loading="lazy"
@@ -270,6 +387,30 @@ const Gallerie = () => {
           </div>
         </div>
       </div>
+
+      {/* Modal Lightbox */}
+      {selectedImage && (
+        <div
+          className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4"
+          onClick={closeImage}
+        >
+          <div className="max-w-7xl max-h-full flex items-center justify-center">
+            <img
+              src={selectedImage.src}
+              alt={selectedImage.alt}
+              className="max-w-full max-h-[90vh] object-contain rounded-lg"
+              onClick={(e) => e.stopPropagation()}
+            />
+          </div>
+          <button
+            className="absolute left-5 text-white text-4xl font-bold hover:text-gray-300 transition-colors z-10"
+            onClick={closeImage}
+            aria-label="Fermer"
+          >
+            &times;
+          </button>
+        </div>
+      )}
     </>
   );
 };
